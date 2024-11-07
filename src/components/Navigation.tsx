@@ -23,13 +23,19 @@ const Navigation = () => {
             GDG ANDC
           </Link>
           <div className="flex gap-8">
-            {["HOME", "BLOGS", "PROJECTS", "TEAM", "ABOUT US"].map((item) => (
+            {[
+              { name: "HOME", path: "/" },               // Home page
+              { name: "BLOGS", path: "/blogs" },         // Blogs page
+              { name: "PROJECTS", path: "/projects" },   // Projects page
+              { name: "TEAM", path: "/team" },           // Team page
+              { name: "ABOUT US", path: "/about-us" },   // About Us page
+            ].map((item) => (
               <Link
-                key={item}
-                href={`/${item.toLowerCase()}`}
+                key={item.name}
+                href={item.path}
                 className="text-white hover:text-purple-400 transition-colors font-medium tracking-wide"
               >
-                {item}
+                {item.name}
               </Link>
             ))}
           </div>
