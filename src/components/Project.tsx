@@ -1,4 +1,4 @@
-"use client"; // Ensure this file is treated as a client component
+"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -55,13 +55,13 @@ const Projects = () => {
     if (intervalIdRef.current) {
       clearInterval(intervalIdRef.current);
     }
-    intervalIdRef.current = setInterval(nextProject, 3000); // Change project every 3 seconds
+    intervalIdRef.current = setInterval(nextProject, 3000);
   };
 
   // Stop the auto-rotation
   const stopAutoRotation = () => {
     if (intervalIdRef.current) {
-      clearInterval(intervalIdRef.current); // Stop auto-rotation on user interaction
+      clearInterval(intervalIdRef.current); 
       intervalIdRef.current = null;
     }
   };
@@ -86,7 +86,7 @@ const Projects = () => {
   }, [currentIndex]);
 
   return (
-    <main className="max-w-7xl mx-auto px-4 py-16 text-center">
+    <main className="max-w-7xl mx-auto px-4 py-16 text-center relative">
       <h1 className="text-5xl font-bold text-white mb-4 font-sans tracking-tight">
         Projects
       </h1>
@@ -96,8 +96,8 @@ const Projects = () => {
         don&apos;t look even slightly believable.
       </p>
 
-      {/* Carousel Container */}
-      <div className="relative overflow-hidden">
+      
+      <div className="relative overflow-hidden mb-20">
         <div
           ref={cardContainerRef}
           className="flex transition-transform duration-500 ease-in-out"
@@ -124,14 +124,15 @@ const Projects = () => {
           ))}
         </div>
       </div>
-      {/* Navigation Buttons */}
-      <div className="flex justify-center gap-4 mt-8">
+
+      
+      <div className="absolute bottom-4 right-4 p-4 flex gap-4">
         <Button
           onClick={() => {
             prevProject();
-            stopAutoRotation(); // Stop auto rotation when user clicks a button
+            stopAutoRotation(); 
           }}
-          className="text-white bg-[#0a0f1e] p-2 rounded-full font-extrabold text-4xl transition-none"
+          className="text-[#FFFDFD] bg-[#0a0f1e] p-2 rounded-full font-extrabold text-4xl transition-none"
         >
           {"\u2190"}
         </Button>
@@ -139,11 +140,11 @@ const Projects = () => {
         <Button
           onClick={() => {
             nextProject();
-            stopAutoRotation(); // Stop auto rotation when user clicks a button
+            stopAutoRotation(); 
           }}
-          className="text-white bg-[#0a0f1e] p-2 rounded-full font-extrabold text-4xl transition-none"
+          className="text-[#FFFDFD] bg-[#0a0f1e] p-2 rounded-full font-extrabold text-4xl transition-none"
         >
-          {"\u2192"} 
+          {"\u2192"}
         </Button>
       </div>
     </main>

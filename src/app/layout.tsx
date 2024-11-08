@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const geistFont = localFont({ src: '/fonts/GeistVF.woff' });
 
@@ -20,7 +21,10 @@ export default function RootLayout({
       <body>
         <div className="min-h-screen bg-[#0a0f1e]">
           <Navigation />
-          {children}
+          <div className="pt-16">
+          <main className="flex-grow">{children}</main>
+          </div>
+          <Footer />
         </div>
       </body>
     </html>

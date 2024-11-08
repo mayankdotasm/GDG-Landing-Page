@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Navigation = () => {
   return (
-    <nav className="border-b border-gray-800">
+    <nav className="fixed top-0 w-full z-10 border-b border-gray-800 bg-[#0a0f1e]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link
@@ -24,11 +24,11 @@ const Navigation = () => {
           </Link>
           <div className="flex gap-8">
             {[
-              { name: "HOME", path: "/" },               // Home page
-              { name: "BLOGS", path: "/blogs" },         // Blogs page
-              { name: "PROJECTS", path: "/projects" },   // Projects page
-              { name: "TEAM", path: "/team" },           // Team page
-              { name: "ABOUT US", path: "/about-us" },   // About Us page
+              { name: "HOME", path: "/" },
+              { name: "BLOGS", path: "/blogs" },
+              { name: "PROJECTS", path: "/projects" },
+              { name: "TEAM", path: "/team" },
+              { name: "ABOUT US", path: "/about-us" },
             ].map((item) => (
               <Link
                 key={item.name}
@@ -44,5 +44,6 @@ const Navigation = () => {
     </nav>
   );
 };
+
 
 export default Navigation;
