@@ -15,8 +15,10 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  const wordsArray = words.split(" "); 
+
   useEffect(() => {
+    
     animate(
       "span",
       {
@@ -24,11 +26,11 @@ export const TextGenerateEffect = ({
         filter: filter ? "blur(0px)" : "none",
       },
       {
-        duration: duration ? duration : 1,
+        duration: duration,
         delay: stagger(0.2),
       }
     );
-  }, [scope.current]);
+  }, [words, filter, duration, animate]);  
 
   const renderWords = () => {
     return (
@@ -53,7 +55,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className=" dark:text-white text-black text-2xl leading-snug tracking-wide">
+        <div className="dark:text-white text-black text-2xl leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>
