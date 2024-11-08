@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaTwitter } from "react-icons/fa"; // Icons for social media
+import { FaInstagram, FaTwitter } from "react-icons/fa"; 
 
 const Footer = () => {
   return (
@@ -18,8 +18,13 @@ const Footer = () => {
         </a>
       </div>
       <div className="flex justify-between px-8 text-sm">
-        <p>All Rights Reserved</p>
-        <p>Email: andc.gdg@gmail.com</p>
+        <p>© Copyright GDG-ANDC. All Rights Reserved</p>
+        <a
+            href="mailto:gdg.andc@gmail.com"
+            className="text-white-400 hover:underline"
+          >
+            gdg.andc@gmail.com
+          </a>
       </div>
     </footer>
   );

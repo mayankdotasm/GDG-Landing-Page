@@ -25,8 +25,8 @@ const Navigation = () => {
           <div className="flex gap-8">
             {[
               { name: "HOME", path: "/" },
-              { name: "BLOGS", path: "/blogs" },
-              { name: "PROJECTS", path: "/projects" },
+              // { name: "BLOGS", path: "/blogs" },
+              // { name: "PROJECTS", path: "/projects" },
               { name: "TEAM", path: "/team" },
               { name: "ABOUT US", path: "/about-us" },
             ].map((item) => (

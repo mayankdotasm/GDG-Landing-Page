@@ -61,7 +61,7 @@ const Projects = () => {
   // Stop the auto-rotation
   const stopAutoRotation = () => {
     if (intervalIdRef.current) {
-      clearInterval(intervalIdRef.current); 
+      clearInterval(intervalIdRef.current);
       intervalIdRef.current = null;
     }
   };
@@ -96,7 +96,6 @@ const Projects = () => {
         don&apos;t look even slightly believable.
       </p>
 
-      
       <div className="relative overflow-hidden mb-20">
         <div
           ref={cardContainerRef}
@@ -125,26 +124,25 @@ const Projects = () => {
         </div>
       </div>
 
-      
       <div className="absolute bottom-4 right-4 p-4 flex gap-4">
         <Button
           onClick={() => {
             prevProject();
-            stopAutoRotation(); 
+            stopAutoRotation();
           }}
-          className="text-[#FFFDFD] bg-[#0a0f1e] p-2 rounded-full font-extrabold text-4xl transition-none"
+          className="text-[#FFFDFD] bg-[#0a0f1e] p-6 rounded-full font-extrabold text-4xl transition-all flex items-center justify-center relative hover:bg-white hover:backdrop-blur-md hover:bg-opacity-20 hover:shadow-xl hover:shadow-white hover:ring-2 hover:ring-purple-500 hover:ring-opacity-50 hover:scale-105 "
         >
-          {"\u2190"}
+          <span className="absolute bottom-2 text-4xl">{"\u2190"}</span>
         </Button>
 
         <Button
           onClick={() => {
             nextProject();
-            stopAutoRotation(); 
+            stopAutoRotation();
           }}
-          className="text-[#FFFDFD] bg-[#0a0f1e] p-2 rounded-full font-extrabold text-4xl transition-none"
+          className="text-[#FFFDFD] bg-[#0a0f1e] p-6 rounded-full font-extrabold text-4xl transition-all flex items-center justify-center relative hover:bg-white hover:backdrop-blur-md hover:bg-opacity-20 hover:shadow-xl hover:shadow-white hover:ring-2 hover:ring-purple-500 hover:ring-opacity-50 hover:scale-105 "
         >
-          {"\u2192"}
+          <span className="absolute bottom-2 text-4xl">{"\u2192"}</span>
         </Button>
       </div>
     </main>
