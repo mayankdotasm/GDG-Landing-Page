@@ -45,9 +45,7 @@ const Projects = () => {
 
   // Function to go to the previous project
   const prevProject = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
   };
 
   // Start the auto-rotation of the projects
@@ -75,13 +73,12 @@ const Projects = () => {
         clearInterval(intervalIdRef.current);
       }
     };
-  }, []);
+  }, [startAutoRotation]);
 
+  // Ensure the container is shifted based on the current index
   useEffect(() => {
     if (cardContainerRef.current) {
-      cardContainerRef.current.style.transform = `translateX(-${
-        currentIndex * 778.38
-      }px)`;
+      cardContainerRef.current.style.transform = `translateX(-${currentIndex * 778.38}px)`;
     }
   }, [currentIndex]);
 
@@ -107,14 +104,10 @@ const Projects = () => {
               className="w-[778.38px] h-[350px] bg-white bg-opacity-80 backdrop-blur-lg rounded-[69px] shadow-lg flex-shrink-0 mr-6"
             >
               <CardHeader>
-                <CardTitle className="uppercase text-white">
-                  {project.title}
-                </CardTitle>
+                <CardTitle className="uppercase text-white">{project.title}</CardTitle>
               </CardHeader>
               <CardContent className="text-left">
-                <p className="text-sm text-gray-400 mb-4">
-                  {project.description}
-                </p>
+                <p className="text-sm text-gray-400 mb-4">{project.description}</p>
                 <Button className="border-gray-600 text-white bg-grey-800 hover:bg-gray-400 px-8 py-2 rounded-full font-extrabold">
                   Know More {"\u2192"}
                 </Button>
@@ -129,8 +122,10 @@ const Projects = () => {
           onClick={() => {
             prevProject();
             stopAutoRotation();
+            startAutoRotation();
           }}
-          className="text-[#FFFDFD] bg-[#0a0f1e] p-6 rounded-full font-extrabold text-4xl transition-all flex items-center justify-center relative hover:bg-white hover:backdrop-blur-md hover:bg-opacity-20 hover:shadow-xl hover:shadow-white hover:ring-2 hover:ring-purple-500 hover:ring-opacity-50 hover:scale-105 "
+          className="text-[#FFFDFD] bg-[#0a0f1e] p-6 rounded-full font-extrabold text-4xl transition-all flex items-center justify-center relative hover:bg-white hover:backdrop-blur-md hover:bg-opacity-20 hover:shadow-xl hover:shadow-white hover:ring-2 hover:ring-purple-500 hover:ring-opacity-50 hover:scale-105"
+          aria-label="Previous Project"
         >
           <span className="absolute bottom-2 text-4xl">{"\u2190"}</span>
         </Button>
@@ -139,8 +134,10 @@ const Projects = () => {
           onClick={() => {
             nextProject();
             stopAutoRotation();
+            startAutoRotation();
           }}
-          className="text-[#FFFDFD] bg-[#0a0f1e] p-6 rounded-full font-extrabold text-4xl transition-all flex items-center justify-center relative hover:bg-white hover:backdrop-blur-md hover:bg-opacity-20 hover:shadow-xl hover:shadow-white hover:ring-2 hover:ring-purple-500 hover:ring-opacity-50 hover:scale-105 "
+          className="text-[#FFFDFD] bg-[#0a0f1e] p-6 rounded-full font-extrabold text-4xl transition-all flex items-center justify-center relative hover:bg-white hover:backdrop-blur-md hover:bg-opacity-20 hover:shadow-xl hover:shadow-white hover:ring-2 hover:ring-purple-500 hover:ring-opacity-50 hover:scale-105"
+          aria-label="Next Project"
         >
           <span className="absolute bottom-2 text-4xl">{"\u2192"}</span>
         </Button>

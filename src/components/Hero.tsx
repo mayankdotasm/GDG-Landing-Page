@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import EventCard from "@/components/ui/event-card";
+
 
 const Hero = () => {
   return (

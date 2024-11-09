@@ -5,16 +5,6 @@ import Image from "next/image";
 const AboutUs = () => {
   return (
     <main className="max-w-7xl mx-auto px-6 py-16">
-      {/* Header Section */}
-      {/* <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-white mb-4 tracking-tight leading-tight">
-          GOOGLE DEVELOPER GROUP
-        </h1>
-        <h2 className="text-3xl font-semibold text-purple-400 mb-8 tracking-wide">
-          ACHARYA NARENDRA DEV COLLEGE
-        </h2>
-      </div> */}
-
       {/* Banner Image */}
       <div className="my-8 overflow-hidden rounded-xl shadow-xl">
         <Image
@@ -33,8 +23,8 @@ const AboutUs = () => {
           At GDG on Campus, ANDC, we believe in the power of community and
           collaboration. Our mission is to provide students with the resources
           and opportunities to learn, share, and contribute to the ever-evolving
-          world of technology. Whether you're a seasoned developer or just
-          starting, there’s a place for you here!
+          world of technology. Whether you&apos;re a seasoned developer or just
+          starting, there&apos;s a place for you here!
         </p>
       </section>
 
@@ -131,7 +121,7 @@ const AboutUs = () => {
         </h2>
         <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
           Stay updated on our events, workshops, and community initiatives by
-          following us on social media. Join our community and let's grow
+          following us on social media. Join our community and let&apos;s grow
           together!
         </p>
 
@@ -167,10 +157,10 @@ const AboutUs = () => {
           Get Involved
         </h2>
         <p className="text-lg text-gray-300">
-          We welcome contributions from everyone! Whether you're interested in
-          joining our events, contributing to our open-source projects, or
-          sharing your knowledge through workshops, there's always something
-          happening at GDG on Campus, ANDC.
+          We welcome contributions from everyone! Whether you&apos;re interested
+          in joining our events, contributing to our open-source projects, or
+          sharing your knowledge through workshops, there&apos;s always
+          something happening at GDG on Campus, ANDC.
         </p>
         <p className="text-lg text-gray-300">
           Check out our open issues in the repository to see how you can get
@@ -193,15 +183,13 @@ const AboutUs = () => {
           .
         </p>
         <p className="text-lg text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
-          Together, let’s build a vibrant tech community that inspires and
+          Together, let&apos;s build a vibrant tech community that inspires and
           empowers each other.
           <br />
           <span className="text-white font-semibold">
             Join us today and be part of the journey!
           </span>
         </p>
-
-        {/* <p className="text-2xl font-bold text-purple-400">Happy Coding! 💻</p> */}
       </section>
     </main>
   );

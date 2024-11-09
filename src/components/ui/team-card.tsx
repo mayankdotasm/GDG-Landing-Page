@@ -2,6 +2,7 @@
 
 import React from "react";
 import { FaInstagram, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
 
 interface TeamCardProps {
   name: string;
@@ -20,11 +21,13 @@ const TeamCard: React.FC<TeamCardProps> = ({ name, role, instagram, twitter, git
   return (
     <div className="text-center p-4">
       <div className="rounded-full w-32 h-32 mx-auto mb-4 bg-gray-300 shadow-lg hover:shadow-2xl transition-all hover:scale-105 hover:shadow-purple-500/50 duration-300 hover:ring-4 hover:ring-purple-300">
-        <a href={linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${name}'s profile`}>
-          <img
+        <a href={linkedin || "#"} target="_blank" rel="noopener noreferrer" aria-label={`${name}'s profile`}>
+          <Image
             src={profileLink} // Image source
             alt={`${name}'s Profile`}
             className="rounded-full w-full h-full object-cover"
+            width={128}
+            height={128}
             onError={(e) => {
               // Fallback if image fails to load
               e.currentTarget.src = fallbackImage;
