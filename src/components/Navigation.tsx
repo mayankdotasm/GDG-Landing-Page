@@ -47,10 +47,10 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* GDG Bar (Always below the logo and title) */}
+      
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 opacity-60 shadow-xl" />
 
-      {/* Mobile Menu (Visible when toggled) */}
+      
       {isMenuOpen && (
         <div
           className="lg:hidden fixed inset-0  bg-[#0a0f1e] bg-opacity-0"
@@ -58,7 +58,7 @@ const Navigation = () => {
         >
           <div
             className="absolute top-16 right-0 w-full h-1/3 bg-[#0a0f1e] text-white p-8 overflow-y-auto bg-opacity-80 backdrop-blur-md"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside menu
+            onClick={(e) => e.stopPropagation()} 
           >
             <div className="flex justify-end">
               {/* The only X button here to close the menu */}
@@ -76,7 +76,7 @@ const Navigation = () => {
                   className={`block py-3 text-center font-medium ${isActive(
                     item.path
                   )} transition-colors`}
-                  onClick={toggleMenu} // Close after clicking a link
+                  onClick={toggleMenu} 
                 >
                   {item.name}
                 </Link>
