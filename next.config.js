@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  images: {
+    domains: ['res.cloudinary.com'], // Added Cloudinary as an allowed domain for images
+  },
 };
 
 module.exports = nextConfig;
