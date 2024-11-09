@@ -6,30 +6,30 @@ const AboutUs = () => {
   return (
     <main className="max-w-7xl mx-auto px-6 py-16">
       {/* Header Section */}
-      <div className="text-center mb-12">
+      {/* <div className="text-center mb-12">
         <h1 className="text-5xl font-bold text-white mb-4 tracking-tight leading-tight">
           GOOGLE DEVELOPER GROUP
         </h1>
         <h2 className="text-3xl font-semibold text-purple-400 mb-8 tracking-wide">
           ACHARYA NARENDRA DEV COLLEGE
         </h2>
-      </div>
+      </div> */}
 
       {/* Banner Image */}
       <div className="my-8 overflow-hidden rounded-xl shadow-xl">
         <Image
-          src="/gdg-andc-banner.jpg"
+          src="/gdg-banner-white.jpeg"
           alt="GDG ANDC Banner"
           width={1200}
           height={400}
-          className="object-cover w-full h-full transition-all hover:scale-105"
+          className="object-cover w-full h-full transition-all "
         />
       </div>
 
       {/* About Us Section */}
       <section className="text-center mb-12 space-y-6">
         <h2 className="text-4xl font-bold text-purple-400 mb-6">About Us</h2>
-        <p className="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
+        <p className="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto text-justify">
           At GDG on Campus, ANDC, we believe in the power of community and
           collaboration. Our mission is to provide students with the resources
           and opportunities to learn, share, and contribute to the ever-evolving
@@ -127,7 +127,7 @@ const AboutUs = () => {
       {/* Connect with Us Section */}
       <section className="mb-12 space-y-8 text-center bg-gray-900 py-12 rounded-lg shadow-xl">
         <h2 className="text-4xl font-bold text-purple-400 mb-6 tracking-tight">
-          🌐 Connect with Us
+          Connect with Us
         </h2>
         <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
           Stay updated on our events, workshops, and community initiatives by

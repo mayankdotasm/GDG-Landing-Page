@@ -18,7 +18,6 @@ export const TextGenerateEffect = ({
   const wordsArray = words.split(" "); 
 
   useEffect(() => {
-    
     animate(
       "span",
       {
@@ -27,10 +26,10 @@ export const TextGenerateEffect = ({
       },
       {
         duration: duration,
-        delay: stagger(0.2),
+        delay: stagger(0.12),
       }
     );
-  }, [words, filter, duration, animate]);  
+  }, [words, filter, duration, animate]);
 
   const renderWords = () => {
     return (
@@ -39,10 +38,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="dark:text-white text-white opacity-0"
-              style={{
-                filter: filter ? "blur(10px)" : "none",
-              }}
+              className={cn("dark:text-white text-white opacity-0", filter ? "blur-sm" : "")} // Use Tailwind's blur utility
             >
               {word}{" "}
             </motion.span>

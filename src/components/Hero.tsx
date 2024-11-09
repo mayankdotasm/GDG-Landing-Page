@@ -24,20 +24,12 @@ const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button className="bg-purple-600 hover:bg-purple-700 active:bg-purple-800 text-white px-10 py-4 rounded-full font-extrabold transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg focus:ring-4 focus:ring-purple-300">
+          <Button className="bg-purple-600 hover:bg-purple-700 active:bg-purple-800 text-white px-12 py-5 rounded-full font-extrabold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus:ring-4 focus:ring-purple-400">
             Join Us
           </Button>
         </a>
       </div>
 
-      <EventCard
-        eventName="Got Latent"
-        eventDescription="Join us for an exciting event focused on Web Development! Participate in workshops, the Shark Tank Challenge, and much more."
-        eventDate="July 15, 2024"
-        eventLocation="Acharya Narendra Dev College, Delhi University"
-        signUpLink="https://docs.google.com/forms/u/1/d/e/1FAIpQLSevjbv_7vZ7y4Pp-vvP9ZTN6SYutkZ3CLYkp5_CxLK2uJp1Ww/viewform"
-        // learnMoreLink="https://docs.google.com/forms/u/1/d/e/1FAIpQLSevjbv_7vZ7y4Pp-vvP9ZTN6SYutkZ3CLYkp5_CxLK2uJp1Ww/viewform"
-      />
     </main>
   );
 };
