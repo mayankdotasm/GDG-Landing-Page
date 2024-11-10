@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaGithub, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
 
 const Footer = () => {
@@ -8,12 +8,11 @@ const Footer = () => {
   const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "#";
   const twitterUrl = process.env.NEXT_PUBLIC_TWITTER_URL || "#";
   const githubUrl = process.env.NEXT_PUBLIC_GITHUB_URL || "#";
-  const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
+  const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@example.com";
 
-  // Handle scroll event to toggle the visibility of the "Go to Top" button
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) { // Show button after scrolling 300px
+      if (window.scrollY > 300) {
         setShowGoTop(true);
       } else {
         setShowGoTop(false);
@@ -21,14 +20,11 @@ const Footer = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Scroll to top functionality
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -67,6 +63,15 @@ const Footer = () => {
         >
           <FaTwitter />
         </a>
+        {email && (
+          <a
+            href={`mailto:${email}`}
+            aria-label="Email"
+            className="text-2xl hover:text-red-500 hover:scale-110 transition-all duration-300"
+          >
+            <FaEnvelope />
+          </a>
+        )}
         <a
           href={githubUrl}
           target="_blank"
@@ -78,14 +83,10 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between items-center px-8 text-sm">
-        <p>© {new Date().getFullYear()} GDG-ANDC. All Rights Reserved</p>
-        <a href={`mailto:${email}`} className="hover:underline mt-2 md:mt-0">
-          {email}
-        </a>
+      <div className="flex justify-center border- items-center px-8 text-sm">
+        <p>Copyright © {new Date().getFullYear()} GDG-ANDC. All Rights Reserved.</p>
       </div>
 
-      {/* Go to Top Button */}
       {showGoTop && (
         <button
           onClick={scrollToTop}

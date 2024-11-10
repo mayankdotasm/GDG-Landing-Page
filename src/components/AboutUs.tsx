@@ -5,20 +5,23 @@ import Image from "next/image";
 const AboutUs = () => {
   return (
     <main className="max-w-7xl mx-auto px-6 py-16">
+        <h2 className="text-4xl font-bold text-center text-purple-400 mb-6">About Us</h2>
       {/* Banner Image */}
-      <div className="my-8 overflow-hidden rounded-xl shadow-xl">
+      <div className="my-8 overflow-hidden text-center rounded-xl shadow-xl">
+      
         <Image
           src="/gdg-banner-white.jpeg"
           alt="GDG ANDC Banner"
           width={1200}
           height={400}
-          className="object-cover w-full h-full transition-all "
+          quality={100}
+          className="object-cover w-full h-full transition-all"
         />
       </div>
 
       {/* About Us Section */}
       <section className="text-center mb-12 space-y-6">
-        <h2 className="text-4xl font-bold text-purple-400 mb-6">About Us</h2>
+        {/* <h2 className="text-4xl font-bold text-purple-400 mb-6">About Us</h2> */}
         <p className="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto text-justify">
           At GDG on Campus, ANDC, we believe in the power of community and
           collaboration. Our mission is to provide students with the resources
