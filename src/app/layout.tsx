@@ -4,7 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const geistFont = localFont({ src: '/fonts/GeistVF.woff' });
+const geistFont = localFont({ src: "/fonts/GeistVF.woff" });
 
 export const metadata: Metadata = {
   title: "GDG Acharya Narendra Dev College",
@@ -19,11 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={geistFont.className}>
       <body>
-        <div className="min-h-screen bg-[#0a0f1e]">
+        <div className="min-h-screen bg-[#0a0f1e] flex flex-col">
           <Navigation />
-          <div className="pt-16">
-          <main className="flex-grow">{children}</main>
+
+          <div className="pt-16 sm:pt-20 lg:pt-16">
+            <main className="flex-grow">{children}</main>
           </div>
+
+
           <Footer />
         </div>
       </body>
