@@ -5,6 +5,7 @@ interface EventCardProps {
   eventName: string;
   eventDescription: string;
   eventDate: string;
+  eventTime?: string; 
   eventLocation?: string;
   signUpLink?: string;
   learnMoreLink?: string;
@@ -14,12 +15,13 @@ const EventCard = ({
   eventName,
   eventDescription,
   eventDate,
+  eventTime,
   eventLocation,
   signUpLink,
   learnMoreLink,
 }: EventCardProps) => {
   return (
-    <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-8 rounded-3xl shadow-xl max-w-2xl mx-auto hover:shadow-2xl transition-shadow duration-500 transform hover:-translate-y-2">
+    <div className="relative bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-8 rounded-3xl max-w-2xl mx-auto shadow-lg transition-shadow duration-500 animate-revolving-shadow">
       <h3 className="text-4xl font-bold text-white mb-5 tracking-tight leading-snug font-['Roboto']">
         {eventName}
       </h3>
@@ -34,6 +36,11 @@ const EventCard = ({
             <strong>Date:</strong> {eventDate}
           </p>
         )}
+        {eventTime && (
+          <p className="text-md font-medium text-gray-200">
+            <strong>Time:</strong> {eventTime}
+          </p>
+        )}
         {eventLocation && (
           <p className="text-md font-medium text-gray-200">
             <strong>Location:</strong> {eventLocation}
@@ -46,7 +53,7 @@ const EventCard = ({
       >
         {signUpLink && (
           <a href={signUpLink} target="_blank" rel="noopener noreferrer">
-            <Button className="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:bg-indigo-600 hover:text-white focus:ring-2 focus:ring-indigo-300 shadow-lg">
+            <Button className="bg-white text-indigo-600 px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:bg-indigo-600 hover:text-white focus:ring-2 focus:ring-indigo-300">
               Sign Up Now
             </Button>
           </a>
@@ -54,7 +61,7 @@ const EventCard = ({
 
         {learnMoreLink && (
           <a href={learnMoreLink} target="_blank" rel="noopener noreferrer">
-            <Button className="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:bg-indigo-600 hover:text-white focus:ring-2 focus:ring-indigo-300 shadow-lg">
+            <Button className="bg-white text-indigo-600 px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:bg-indigo-600 hover:text-white focus:ring-2 focus:ring-indigo-300">
               Learn More
             </Button>
           </a>
