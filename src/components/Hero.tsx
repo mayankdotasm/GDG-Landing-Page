@@ -12,7 +12,7 @@ const Hero = () => {
 
       {/* Subtitle */}
       <h2 className="text-2xl sm:text-3xl font-semibold text-purple-400 mb-8 sm:mb-12 tracking-wide">
-        ACHARYA NARENDRA DEV COLLEGE
+        ACHARYA NARENDRA DEV COLLEGE, UNIVERSITY OF DELHI
       </h2>
 
       {/* Description */}

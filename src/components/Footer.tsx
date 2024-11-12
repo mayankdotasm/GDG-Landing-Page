@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
 
       <p className="text-lg font-semibold">GOOGLE DEVELOPER GROUPS</p>
-      <p className="text-lg font-semibold mb-4">ACHARYA NARENDRA DEV COLLEGE</p>
+      <p className="text-lg font-semibold mb-4">ACHARYA NARENDRA DEV COLLEGE, UNIVERSITY OF DELHI</p>
 
       <div className="flex justify-center gap-6 mb-6">
         <a
