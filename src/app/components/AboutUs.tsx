@@ -1,6 +1,5 @@
 import React from "react";
-import { Button } from "@/app/components/ui/button";
-import Image from "next/image";
+
 
 const AboutUs = () => {
   return (

@@ -1,6 +1,6 @@
 'use client';
-import React, { useState } from 'react';
-import { Calendar, MapPin, Clock, Users, ArrowRight, ExternalLink, ChevronRight } from 'lucide-react';
+import React from 'react';
+
 import EventCard from './ui/event-card';
 
 // Type definitions
@@ -13,14 +13,10 @@ interface Event {
   location?: string;
   signUpLink?: string;
   category: 'Workshop' | 'Bootcamp' | 'Seminar'|'Orientation';
-  attendees: any;
+  attendees: string |number;
 }
 
-interface EventCardProps {
-  event: Event;
-  isActive?: boolean;
-  compact?: boolean;
-}
+
 
 // Sample events data - replace with your actual data
 export const eventsData: { active: Event[]; past: Event[] } = {
@@ -116,7 +112,7 @@ const HomeEventsSection: React.FC = () => {
         <div className="text-center mb-12">
 
           <p className="text-xl text-white max-w-3xl mx-auto">
-            Don't miss our next exciting event! Join fellow developers and tech enthusiasts.
+            Don&apos;t miss our next exciting event! Join fellow developers and tech enthusiasts.
           </p>
         </div>
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "@/app/components/ui/button";
 import { Calendar, MapPin, Clock, Users, ArrowRight, ExternalLink } from 'lucide-react';
 // Type definitions
 interface Event {
@@ -11,7 +10,7 @@ interface Event {
   location?: string;
   signUpLink?: string;
   category: 'Workshop' | 'Bootcamp' | 'Seminar'|'Orientation';
-  attendees: any;
+  attendees: string |number;
 }
 
 interface EventCardProps {
