@@ -85,10 +85,7 @@ const EventsListPage: React.FC = () => {
                     </div>
 
                     <div className="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
-                        <div className="text-3xl font-bold text-green-600 mb-2">
-                            {eventsData.active.reduce((sum, event) => sum + event.attendees, 0) +
-                                eventsData.past.reduce((sum, event) => sum + event.attendees, 0)}
-                        </div>
+                      
                         <div className="text-gray-600">Total Attendees</div>
                     </div>
 
