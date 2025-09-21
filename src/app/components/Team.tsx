@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import TeamCard from "@/components/ui/team-card";
-import gdgLead from "../teamMembers.json";
+import TeamCard from "@/app/components/ui/team-card";
+import gdgLead from "../../teamMembers.json";
 import { useState, useEffect } from "react";
 
 interface TeamMember {

@@ -1,6 +1,7 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { Button } from "@/app/components/ui/button";
+import { TextGenerateEffect } from "@/app/components/ui/text-generate-effect";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -14,7 +15,19 @@ const Hero = () => {
       <h2 className="text-2xl sm:text-3xl font-semibold text-purple-400 mb-8 sm:mb-12 tracking-wide">
         ACHARYA NARENDRA DEV COLLEGE, UNIVERSITY OF DELHI
       </h2>
+      {/* Banner Image */}
+      <div className="my-8 overflow-hidden text-center rounded-xl shadow-xl">
 
+        <Image
+          src="/gdg-banner-white.jpeg"
+          alt="GDG ANDC Banner"
+          width={1200}
+          height={400}
+          quality={100}
+          className="object-cover w-full h-full transition-all"
+        />
+      </div>
+      <br />
       {/* Description */}
       <TextGenerateEffect
         words="Welcome to GDG on Campus, ANDC, your hub for technology enthusiasts, aspiring developers, and innovators at Acharya Narendra Dev College, Delhi University. We are part of the global Google Developer Groups (GDGs), dedicated to fostering a thriving tech community on campus. Join us as we explore the latest technologies, collaborate on exciting projects, and empower each other to grow!"
