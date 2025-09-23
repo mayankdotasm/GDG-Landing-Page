@@ -37,6 +37,7 @@ const Navigation = () => {
           {[
             { name: "HOME", path: "/" },
             { name: "TEAM", path: "/team" },
+            { name: "EVENTS", path: "/events"},
             { name: "ABOUT US", path: "/about-us" },
           ].map((item) => (
             <Link
@@ -76,6 +77,7 @@ const Navigation = () => {
             {[
               { name: "HOME", path: "/" },
               { name: "TEAM", path: "/team" },
+              { name: "EVENTS", path: "/events"},
               { name: "ABOUT US", path: "/about-us" },
             ].map((item) => (
               <Link
