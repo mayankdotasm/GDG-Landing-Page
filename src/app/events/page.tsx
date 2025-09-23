@@ -9,14 +9,14 @@ const EventsListPage: React.FC = () => {
     const [activeTab, setActiveTab] = useState('active');
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-[#0a0f1e]">
             {/* Page Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
+            <div className="bg-[#0a0f1e] text-white py-16">
                 <div className="max-w-7xl mx-auto px-4 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">
                         Events & Workshops
                     </h1>
-                    <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                    <p className="text-xl text-purple-400 max-w-3xl mx-auto">
                         Join our community of developers, attend workshops, and stay updated with the latest in tech.
                     </p>
                 </div>
