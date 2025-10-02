@@ -75,7 +75,7 @@ const Navigation = () => {
         onClick={toggleMenu}
       >
         <div
-          className={`absolute top-20 w-full h-auto bg-white bg-opacity-10 text-white pr-4 pl-4 overflow-y-auto backdrop-blur-lg rounded-b-2xl shadow-xl transition-transform duration-300 ${isMenuOpen ? "translate-y-0" : "-translate-y-full"
+          className={`absolute top-20 w-full h-auto bg-black bg-opacity-80 text-white pr-4 pl-4 overflow-y-auto backdrop-blur-lg rounded-b-2xl shadow-xl transition-transform duration-300 ${isMenuOpen ? "translate-y-0" : "-translate-y-full"
             }`}
           onClick={(e) => e.stopPropagation()} 
         >
@@ -91,7 +91,7 @@ const Navigation = () => {
                 href={item.path}
                 className={`block py-3 text-center drop-shadow-md ${isActive(item.path)
                     ? "text-purple-400"
-                    : "text-white hover:text-purple-400"
+                    : "text-White hover:text-purple-400"
                   } transition-colors`}
                 onClick={toggleMenu} // close menu on item click
               >
