@@ -5,12 +5,12 @@ import Image from "next/image";
 const AboutUs = () => {
   return (
     <main className="max-w-7xl mx-auto px-6 py-16">
-        <h2 className="text-4xl font-bold text-center text-purple-400 mb-6">About Us</h2>
+      <h2 className="text-4xl md:text-5xl font-bold  text-center text-white mb-6">About Us</h2>
       {/* Banner Image */}
       <div className="my-8 overflow-hidden text-center rounded-xl shadow-xl">
-      
+
         <Image
-          src="/gdg-banner-white.jpeg"
+          src="/gdg-banner-remake.svg"
           alt="GDG ANDC Banner"
           width={1200}
           height={400}

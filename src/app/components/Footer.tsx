@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { FaInstagram, FaTwitter, FaGithub, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const [showGoTop, setShowGoTop] = useState(false);
@@ -32,16 +33,20 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-8 text-center relative">
       <div className="flex justify-center mb-4">
-        <Image
-          src="/gdg.png"
-          alt="GDG Logo"
-          width={64}
-          height={64}
-          className="object-contain"
-        />
+        <Link
+          href="https://gdg.community.dev/gdg-on-campus-acharya-narendra-dev-college-delhi-india/"
+          className="flex items-center gap-2 text-white font-bold text-xl z-0 justify-center"
+        >
+          <Image
+            src="/GDG-black.svg"
+            alt="GDG Logo"
+            width={300}
+            height={90}
+            className="object-contain"
+          />
+        </Link>
       </div>
 
-      <p className="text-lg font-semibold">GOOGLE DEVELOPER GROUPS</p>
       <p className="text-lg font-semibold mb-4">ACHARYA NARENDRA DEV COLLEGE, UNIVERSITY OF DELHI</p>
 
       <div className="flex justify-center gap-6 mb-6">
