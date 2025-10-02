@@ -1,17 +1,6 @@
 import React from "react";
 import { Calendar, MapPin, Clock, Users, ArrowRight, ExternalLink } from 'lucide-react';
-// Type definitions
-interface Event {
-  id: number;
-  name: string;
-  description: string;
-  date: string;
-  time?: string;
-  location?: string;
-  signUpLink?: string;
-  category: 'Workshop' | 'Bootcamp' | 'Seminar'|'Orientation';
-  attendees: string |number;
-}
+import { Event } from '@/types/event';
 
 interface EventCardProps {
   event: Event;
@@ -24,7 +13,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, isActive = true, compact =
     Workshop: 'bg-blue-50 text-blue-700 border-blue-200',
     Bootcamp: 'bg-green-50 text-green-700 border-green-200',
     Seminar: 'bg-purple-50 text-purple-700 border-purple-200',
-    Orientation:'bg-yellow-50 text-purple-700 border-yellow-200',
+    Orientation: 'bg-yellow-50 text-purple-700 border-yellow-200',
   };
 
   if (compact) {
@@ -43,15 +32,15 @@ const EventCard: React.FC<EventCardProps> = ({ event, isActive = true, compact =
                 </span>
               )}
             </div>
-            
+
             <h3 className="text-lg font-semibold text-gray-900 mb-2 hover:text-yellow-400 transition-colors">
               {event.name}
             </h3>
-            
+
             <p className="text-gray-600 text-sm mb-4 line-clamp-2">
               {event.description}
             </p>
-            
+
             <div className="flex flex-wrap gap-4 text-xs text-gray-500">
               <div className="flex items-center">
                 <Calendar className="w-3 h-3 mr-1 text-red-500" />
@@ -71,7 +60,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, isActive = true, compact =
               )}
             </div>
           </div>
-          
+
           <div className="ml-6 flex flex-col items-end gap-3">
             {event.attendees && (
               <div className="flex items-center text-xs text-gray-500">
@@ -79,11 +68,11 @@ const EventCard: React.FC<EventCardProps> = ({ event, isActive = true, compact =
                 {event.attendees}
               </div>
             )}
-            
+
             {isActive && event.signUpLink && (
-              <a 
-                href={event.signUpLink} 
-                target="_blank" 
+              <a
+                href={event.signUpLink}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium py-2 px-4 rounded-lg transition-colors duration-200"
               >
@@ -111,11 +100,11 @@ const EventCard: React.FC<EventCardProps> = ({ event, isActive = true, compact =
             </span>
           )}
         </div>
-        
+
         <h3 className="text-2xl font-bold text-yellow-500 mb-4 leading-tight group-hover:text-gray-900 transition-colors">
           {event.name}
         </h3>
-        
+
         <p className="text-gray-600 text-base leading-relaxed mb-6">
           {event.description}
         </p>
@@ -128,7 +117,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, isActive = true, compact =
               <p className="text-sm">{event.date}</p>
             </div>
           </div>
-          
+
           {event.time && (
             <div className="flex items-center text-gray-700">
               <Clock className="w-5 h-5 mr-3 text-orange-500" />
@@ -138,7 +127,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, isActive = true, compact =
               </div>
             </div>
           )}
-          
+
           {event.location && (
             <div className="flex items-center text-gray-700">
               <MapPin className="w-5 h-5 mr-3 text-green-500" />
@@ -148,7 +137,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, isActive = true, compact =
               </div>
             </div>
           )}
-          
+
           {event.attendees && (
             <div className="flex items-center text-gray-700">
               <Users className="w-5 h-5 mr-3 text-blue-500" />
@@ -161,13 +150,13 @@ const EventCard: React.FC<EventCardProps> = ({ event, isActive = true, compact =
         </div>
 
         {isActive && event.signUpLink && (
-          <a 
-            href={event.signUpLink} 
-            target="_blank" 
+          <a
+            href={event.signUpLink}
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center w-full bg-purple-400 hover:bg-yellow-500 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 group shadow-lg hover:shadow-xl"
           >
-           Join us on 
+            Join us on
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />{'... '}  25th Sep, 2025
           </a>
         )}
