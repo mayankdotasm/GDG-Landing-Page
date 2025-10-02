@@ -2,7 +2,6 @@
 import React from 'react';
 import EventCard from './ui/event-card';
 import { eventsData } from '@/app/events/eventsData';
-import { Event } from '@/types/event';
 
 // HOME PAGE: Single Featured Event Component
 const HomeEventsSection: React.FC = () => {
@@ -21,7 +20,7 @@ const HomeEventsSection: React.FC = () => {
           <div className="mt-6">
             <h3 className="text-2xl font-semibold text-purple-400 mb-4">Check Out All Events</h3>
             <p className="text-gray-300 mb-6">
-              Explore our events, workshops, and seminars to see what we've been up to.
+              Explore our events, workshops, and seminars to see what we&apos;ve been up to.
             </p>
             <a
               href="/events"
